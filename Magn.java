@@ -1,7 +1,4 @@
 
-import java.util.Scanner;
-import java.util.Random;
-
 public class Magn {
 
     public static void main(String[] args) {
@@ -21,4 +18,12 @@ class finalValue {
     public int returnTime() {
         return this.time;
     }
+}
+
+class Simulation {
+
+    public Simulation() {
+
+    }
+
 }
