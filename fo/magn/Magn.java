@@ -1,5 +1,9 @@
+package fo.magn
 
 import java.util.Scanner;
+
+import fo.magn.store.GasStation;
+
 import java.util.Random;
 
 public class Magn {

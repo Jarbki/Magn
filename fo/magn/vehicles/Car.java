@@ -1,3 +1,5 @@
+package fo.magn.vehicles
+
 import java.util.Random;
 
 public class Car {

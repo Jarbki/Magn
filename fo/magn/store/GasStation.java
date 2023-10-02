@@ -1,4 +1,8 @@
+package fo.magn.store
+
 import java.util.Scanner;
+
+import fo.magn.finalValue;
 
 public class GasStation {
 
