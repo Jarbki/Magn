@@ -22,17 +22,3 @@ class finalValue {
         return this.time;
     }
 }
-
-class GasStation{
-        int cars;
-        int pumps;
-
-        Scanner input = new Scanner(System.in);
-        finalValue time = new finalValue();
-
-        System.out.print("Insert number of cars: ");
-        System.out.println();
-        cars = Integer.parseInt(input.nextLine());
-        System.out.println();
-        System.out.print("Insert number of pumps: ");
-}
