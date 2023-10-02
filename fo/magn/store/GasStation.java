@@ -1,4 +1,4 @@
-package fo.magn.store
+package fo.magn.store;
 
 import java.util.Scanner;
 

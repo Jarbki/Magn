@@ -1,14 +1,31 @@
-package fo.magn.vehicles
+package fo.magn.vehicles;
 
 import java.util.Random;
 
 public class Car {
-    private int sausage;
-    private int leaveCar;
+    private boolean sausage = true;
+    private boolean leaveCar = true;
+    private int liters;
 
     public Car() {
+
         Random random = new Random();
-        this.leaveCar = random.nextInt(10) + 1;
-        this.sausage = random.nextInt(10) + 1;
+        if (random.nextInt(10) + 1 > 4) {
+            this.leaveCar = false;
+        }
+        if (random.nextInt(10) + 1 > 3) {
+            this.sausage = false;
+        }
+
+        this.liters = random.nextInt(40) + 31;
+
+    }
+
+    public boolean sausage() {
+        return this.sausage;
+    }
+
+    public boolean leaveCar() {
+        return this.leaveCar;
     }
 }

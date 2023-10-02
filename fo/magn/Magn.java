@@ -1,9 +1,8 @@
-package fo.magn
-
-import java.util.Scanner;
+package fo.magn;
 
 import fo.magn.store.GasStation;
 
+import java.util.Scanner;
 import java.util.Random;
 
 public class Magn {
@@ -25,4 +24,12 @@ class finalValue {
     public int returnTime() {
         return this.time;
     }
+}
+
+class Simulation {
+
+    public Simulation() {
+
+    }
+
 }
