@@ -1,8 +1,6 @@
 package fo.magn.vehicles;
-
 import fo.magn.pumps.Pump;
 import java.util.Random;
-
 private Random random = new Random(); // move to simulation
 
 public class Car extends Thread {

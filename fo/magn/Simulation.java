@@ -38,13 +38,11 @@ public class Simulation {
 
                 //kannar nær næsti bilur skal koma
                 for (Car car : this.cars){
-                    if (car.arrivalTime() == Math.floor(time/)){
-                        
+                    if (car.arrivalTime() == Math.floor(time)){
+
                     }
                 }
             }
-
-
 
         }
     }
