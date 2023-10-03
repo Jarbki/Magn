@@ -1,16 +1,18 @@
 package fo.magn.pumps;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import fo.magn.vehicles.Car;
-import java.util.LinkedList;
 
 
 public class Pump {
 
-    private LinkedList<Car> queue = new LinkedList<Car>();
-    private static int litersPerSecond = 10;
+    private List<Car> queue;
+    private static int LITERS_PER_SECOND = 10;
 
     public Pump() {
-
+        this.queue = new ArrayList<>();
     }
 
     public void addQueue(Car car) {
