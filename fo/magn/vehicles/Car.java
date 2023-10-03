@@ -2,7 +2,7 @@ package fo.magn.vehicles;
 
 import java.util.Random;
 
-public class Car {
+public class Car extends Thread {
     private boolean sausage = true;
     private boolean leaveCar = true;
     private int liters;
@@ -17,7 +17,7 @@ public class Car {
             this.sausage = false;
         }
 
-        this.liters = random.nextInt(40) + 31;
+        this.liters = random.nextInt(41) + 30;
 
     }
 

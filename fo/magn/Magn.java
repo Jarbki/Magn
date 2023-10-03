@@ -9,8 +9,6 @@ public class Magn {
 
     public static void main(String[] args) {
 
-        GasStation magn = new GasStation();
-
     }
 }
 
