@@ -3,13 +3,14 @@ package fo.magn.vehicles;
 import java.util.Random;
 
 public class Car {
-    private boolean sausage = true;
-    private boolean leaveCar = true;
-    private int liters;
+    private boolean buysSausage = true;
+    private boolean leavesCarAtPump = true;
+    private int requiredFuel;
+    private int currentFuelInLiters;
+    private Random random = new Random();
 
     public Car() {
 
-        Random random = new Random();
         if (random.nextInt(10) + 1 > 4) {
             this.leaveCar = false;
         }
@@ -17,7 +18,7 @@ public class Car {
             this.sausage = false;
         }
 
-        this.liters = random.nextInt(40) + 31;
+        this.requiredFuel = random.nextInt(40) + 31;
 
     }
 
