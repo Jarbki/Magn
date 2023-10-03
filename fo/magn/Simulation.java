@@ -17,6 +17,8 @@ public class Simulation {
         // koyrir simulation
         while(true){
         
+            int time = 0;
+
             //spyr um tal av bilum og pumpum
             UserInput userInput = new UserInput();
             
@@ -32,7 +34,15 @@ public class Simulation {
             }
             
             //loop sum koyrir simulatión logic
+            while (carAmount != 0){
 
+                //kannar nær næsti bilur skal koma
+                for (Car car : this.cars){
+                    if (car.arrivalTime() == Math.floor(time/)){
+                        
+                    }
+                }
+            }
 
 
 

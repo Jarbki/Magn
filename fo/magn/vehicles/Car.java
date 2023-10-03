@@ -1,5 +1,6 @@
 package fo.magn.vehicles;
 
+import fo.magn.pumps.Pump;
 import java.util.Random;
 
 private Random random = new Random(); // move to simulation
@@ -9,6 +10,8 @@ public class Car extends Thread {
     private int requiredFuel;
     private int currentFuel;
     private int arrivalTime;
+    private String state;
+    private int pumpID;
 
     public Car() {
 
@@ -29,16 +32,18 @@ public class Car extends Thread {
         this.requiredFuel = random.nextInt(40) + 31;
 
         //finnur arrivaltíð
-        this.arrivalTime = random.nextInt(10)+1;
+        this.arrivalTime = random.nextInt(11)+1;
     }
 
-    public boolean leaveCar() {
-        return leavesCarCarAtPump;
+    public boolean leavesCar() {
+        return leavesCarAtPump;
     }
 
     @Override
     public void run(){
        //tað sum skal koyra tá thread startar.
+       this.state = "RUNNING";
+
 
     }
 }
