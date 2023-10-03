@@ -18,11 +18,7 @@ public class Pump {
     }
 
     public void fillUp(){
-
         Car firstCar = this.queue.getFirst();
         this.queue.removeFirst();
-
-        if ()
-
     }
 }

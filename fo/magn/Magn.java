@@ -9,10 +9,16 @@ public class Magn {
 
     public static void main(String[] args) {
 
-        GasStation magn = new GasStation();
-
     }
 }
+
+
+
+
+
+
+
+
 
 class finalValue {
     private int time;
@@ -26,10 +32,3 @@ class finalValue {
     }
 }
 
-class Simulation {
-
-    public Simulation() {
-
-    }
-
-}
