@@ -1,24 +1,27 @@
 package fo.magn.store;
 
-import java.util.Scanner;
-import fo.magn.finalValue;
+
+import fo.magn.util.UserInput;
+import fo.magn.vehicles.Car;
+import java.util.LinkedList;
+import fo.magn.pumps.Pump;
 
 public class GasStation {
 
-    int cars;
-    int pumps;
+    private LinkedList<Pump> pumps;
 
-    public GasStation() {
+    private int cars;
+    private int sausageTime = 15;
+    private int serviceTime = 10;
 
-        Scanner input = new Scanner(System.in);
-        finalValue time = new finalValue();
-
-        System.out.print("Insert number of cars: ");
-        System.out.println();
-        cars = Integer.parseInt(input.nextLine());
-        System.out.println();
-        System.out.print("Insert number of pumps: ");
-
+    public GasStation(int pumpAmount) {
+        for (int i = 0; i <= pumpAmount; i++){
+            Pump pump = new Pump();
+            this.pumps.addLast(pump);
+        }
+        
     }
+
+    
 
 }

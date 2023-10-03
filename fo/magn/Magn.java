@@ -12,6 +12,14 @@ public class Magn {
     }
 }
 
+
+
+
+
+
+
+
+
 class finalValue {
     private int time;
 
@@ -24,10 +32,3 @@ class finalValue {
     }
 }
 
-class Simulation {
-
-    public Simulation() {
-
-    }
-
-}
