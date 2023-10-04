@@ -1,26 +1,25 @@
 package fo.magn.pumps;
 
 import java.util.ArrayList;
-import java.util.List;
 
 import fo.magn.vehicles.Car;
 
 
 public class Pump {
 
-    private List<Car> queue;
+    private ArrayList<Car> queue;
     private static int LITERS_PER_SECOND = 10;
+    private boolean occupied;
 
     public Pump() {
-        this.queue = new ArrayList<>();
+        this.queue = new ArrayList<Car>();
     }
 
     public void addQueue(Car car) {
-        this.queue.addLast(car);
+        this.queue.add(-1,car);
     }
 
-    public void fillUp(){
-        Car firstCar = this.queue.getFirst();
-        this.queue.removeFirst();
+    public synchronized void fillUp(){
+       
     }
 }
