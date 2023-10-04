@@ -4,6 +4,7 @@ import fo.magn.store.GasStation;
 import fo.magn.util.UserInput;
 import fo.magn.vehicles.Car;
 import fo.magn.pumps.Pump;
+import fo.magn.vehicles.Customer;
 import java.util.ArrayList;
 
 public class Simulation {
@@ -14,43 +15,55 @@ public class Simulation {
         // koyrir simulation
         while(true){
 
-            // variabul sum skal halda okkara thread objektir.
-            ArrayList<Car> cars;
+            ArrayList<Car> cars = new ArrayList<Car>();
+            ArrayList<Car> parkedCars = new ArrayList<Car>();
+            ArrayList<Pump> pumps = new ArrayList<Pump>();
 
-            // Halda parkeraðar bilar
-            ArrayList<Car> parkedCars;
-
-            // Halda pumpir
-            ArrayList<Pump> pumps;
-        
-            int time = 0;
-
-            //spyr um tal av bilum og pumpum
             UserInput userInput = new UserInput();
-            
-            //ger pumpir
-            int pumpAmount = userInput.Pumps();
             GasStation magn = new GasStation();
+            
 
-            // ger threads fyri allar bilar.
-            int carAmount = userInput.Cars();
-            for (int i = 0; i <= carAmount; i++){
-                Car car = new Car();
-                cars.add(-1, car);
+            // ger pumpir
+            int pumpAmount = userInput.Pumps();
+            for (int i = 0; i < pumpAmount; i++){
+                Pump pump = new Pump();
+                pumps.add(pump);
             }
             
+            // ger threads fyri allar bilar.
+            int carAmount = userInput.Cars();
+            for (int i = 0; i < carAmount; i++){
+                Car car = new Car();
+                cars.add(car);
+            }
+            
+            int time = 0;
             //loop sum koyrir simulatión logic
             while (carAmount != 0){
+                time++;
 
                 //kannar nær næsti bilur skal koma
-                for (Car car : this.cars){
-                    if (car.arrivalTime() == Math.floor(time)){
+                for (Car car : cars){
 
+                    if (car.getArrivalTime() == time%10){
+
+                        for(Pump pump : pumps){
+                            int smallest = 10000;
+                            
+                            if( pump.queueLength() < smallest){
+                                pump.addQueue(car);
+
+                            }
+                        }
                     }
                 }
             }
 
         }
+    }
+
+    public synchronized void tillService(Customer customer){
+
     }
 
 }

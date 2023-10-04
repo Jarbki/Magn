@@ -7,14 +7,15 @@ public class Car implements Runnable {
     
     
     private int requiredFuel;
-    private int currentFuel;
+        
     private int arrivalTime;
     private String state;
-    
+    private int ID;
 
     private Customer customer;
 
-    public Car() {
+    public Car(int id) {
+        this.ID = id;
 
         Random random = new Random();
         
@@ -34,16 +35,24 @@ public class Car implements Runnable {
         this.requiredFuel = random.nextInt(40) + 31;
 
         //finnur arrivaltíð
-        this.arrivalTime = random.nextInt(11)+1;
+        this.arrivalTime = random.nextInt(10)+1;
     }
 
 
-    
+
     @Override
     public void run(){
        //tað sum skal koyra tá thread startar.
        this.state = "RUNNING";
 
 
+    }
+
+    public Customer getCustomer(){
+        return this.customer;
+    }
+
+    public int getArrivalTime(){
+        return this.arrivalTime;
     }
 }

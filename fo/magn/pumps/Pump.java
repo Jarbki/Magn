@@ -16,10 +16,14 @@ public class Pump {
     }
 
     public void addQueue(Car car) {
-        this.queue.add(-1,car);
+        this.queue.add(car);
     }
 
     public synchronized void fillUp(){
        
+    }
+
+    public int queueLength(){
+        return queue.size();
     }
 }

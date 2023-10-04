@@ -20,11 +20,11 @@ public class GasStation {
     }
 
     public void addTillQueue(Customer customer){
-        tillQueue.add(-1, customer);
+        tillQueue.add(customer);
     }
 
     public void addSausageQueue(Customer customer){
-        sausageQueue.add(-1, customer);
+        sausageQueue.add(customer);
     }
 
     
