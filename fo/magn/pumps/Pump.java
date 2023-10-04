@@ -9,7 +9,7 @@ public class Pump {
 
     private ArrayList<Car> queue;
     private static int LITERS_PER_SECOND = 10;
-    private boolean occupied;
+    
 
     public Pump() {
         this.queue = new ArrayList<Car>();
@@ -19,11 +19,15 @@ public class Pump {
         this.queue.add(car);
     }
 
-    public synchronized void fillUp(){
+    public synchronized void fillUp(Car car){
        
     }
 
     public int queueLength(){
         return queue.size();
+    }
+
+    public ArrayList<Car> carQueue(){
+        return this.queue;
     }
 }

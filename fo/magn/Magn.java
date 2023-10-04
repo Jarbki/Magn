@@ -15,20 +15,3 @@ public class Magn {
 
 
 
-
-
-
-
-
-class finalValue {
-    private int time;
-
-    public synchronized void increment(int amount) {
-        this.time += amount;
-    }
-
-    public int returnTime() {
-        return this.time;
-    }
-}
-
