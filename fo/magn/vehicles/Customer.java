@@ -3,12 +3,12 @@ package fo.magn.vehicles;
 
 public class Customer {
     
-    private boolean sausage;
-    private boolean leaveCar;
+    private boolean wantsSausage;
+    private boolean usesParking;
 
 
-    public Customer(boolean sausage, boolean leaveCar){
-        this.sausage = sausage;
-        this.leaveCar = leaveCar;
+    public Customer(boolean wantsSausage, boolean usesParking){
+        this.wantsSausage = wantsSausage;
+        this.usesParking = usesParking;
     }
 }

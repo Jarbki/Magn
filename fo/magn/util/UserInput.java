@@ -3,28 +3,32 @@ package fo.magn.util;
 import java.util.Scanner;
 
 public class UserInput {
-    private int cars;
-    private int pumps;
+    private int carAmount;
+    private int pumpAmount;
+
+    private Scanner input;
 
     public UserInput() {
-        Scanner input = new Scanner(System.in);
+        this.input = new Scanner(System.in);
 
-        System.out.println();
+        // Prompt for number of cars
         System.out.print("Insert number of cars: ");
-        this.cars = Integer.parseInt(input.nextLine());
-
         System.out.println();
+        this.carAmount = Integer.parseInt(input.nextLine());
+
+        // Prompt for number of pumps
         System.out.print("Insert number of pumps: ");
-        this.pumps = Integer.parseInt(input.nextLine());
+        System.out.println();
+        this.pumpAmount = Integer.parseInt(input.nextLine());
 
         input.close();
     }
 
-    public int Cars() {
-        return this.cars;
+    public int getCarAmount() {
+        return this.carAmount;
     }
 
-    public int Pumps() {
-        return this.pumps;
+    public int getPumpAmount() {
+        return this.pumpAmount;
     }
 }

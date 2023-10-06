@@ -26,24 +26,32 @@ public class Simulation {
             
 
             // ger pumpir
-            int pumpAmount = userInput.Pumps();
+            int pumpAmount = userInput.getPumpAmount();
             for (int i = 0; i < pumpAmount; i++){
                 Pump pump = new Pump();
                 pumps.add(pump);
             }
             
             // ger threads fyri allar bilar.
-            int carAmount = userInput.Cars();
+            int carAmount = userInput.getCarAmount();
             for (int i = 0; i < carAmount; i++){
                 boolean leavesCarAtPump = true;
                 boolean sausage = true;
+
+                // 40% chance car will be left at pump
                 if ((random.nextInt(10) + 1) > 4) {
                     leavesCarAtPump = false;
                 }
+
+                // 30% chance customer wants sausage
                 if ((random.nextInt(10) + 1) > 3) {
                     sausage = false;
                 }
+
+                // Make required fuel to be between 30 to 70 liters
                 int requiredFuel = random.nextInt(41) + 30;
+
+
                 Car car = new Car(i, requiredFuel, leavesCarAtPump, sausage);
                 cars.add(car);
             }

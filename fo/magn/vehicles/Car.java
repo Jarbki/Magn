@@ -7,17 +7,18 @@ public class Car extends Thread {
     
     
     private int requiredFuel;
-    private int ID;
+    private int carID;
     private int currentFuel = 0;
     private Customer customer;
     private Pump pump;
-    private boolean full = false;
+    private boolean full;
     
 
-    public Car(int id, int requiredFuel, boolean sausage, boolean leavesCarAtPump) {
-        this.ID = id;
+    public Car(int carID, int requiredFuel, boolean wantsSausage, boolean leavesCarAtPump) {
+        this.carID = carID;
         this.requiredFuel = requiredFuel;
-        this.customer = new Customer(sausage, leavesCarAtPump);
+        this.customer = new Customer(wantsSausage, leavesCarAtPump);
+        this.full = false;
     }
 
 
